@@ -5,12 +5,12 @@
 global _start
 
 section .data
-	welcome db 0dh, 0ah, 0dh, 0ah, " ****************************************** Hello and Welcome to theis Calculator! ****************************************** ", 0dh, 0ah
+	welcome db 0dh, 0ah, 0dh, 0ah, " ****************************************** Hello and Welcome to this Calculator! ****************************************** ", 0dh, 0ah
 	welcome_length equ $-welcome
-	
+
 	choice db "Please make your choice: ", 0dh, 0ah
 	choice_length equ $-choice
-	
+
 	operator db "1, Add", 0dh, 0ah, "2. Substract", 0dh, 0ah, "3. Multiply", 0dh, 0ah, "4. Divide", 0dh, 0ah, "5. Exit", 10
 	operator_length equ $-operator
 
@@ -83,16 +83,16 @@ Compare_input:
 
     cmp byte[rsi], '1'
     je Add
-   
+
     cmp byte[rsi], '2'
     je Substract
 
     cmp byte[rsi], '3'
     je Multiply
-   
+
     cmp byte[rsi], '4'
     je Divide
-   
+
     cmp byte[rsi], '5'
     je Exit
 
@@ -137,7 +137,7 @@ Add:
 
 	mov r10, r8
 	mov r10, r9
-	
+
 	pop r9
 	pop r8
 
@@ -224,7 +224,7 @@ Substract:
 
 	mov r10, r8
 	sub r10, r9
-	
+
 	pop r9
 	pop r8
 
@@ -311,7 +311,7 @@ Multiply:
 
 	mov r10, r8
 	imul r10, r9
-	
+
 	pop r9
 	pop r8
 
@@ -397,7 +397,7 @@ Divide:
 
 	mov r10, r8
 	div r10, r9
-	
+
 	pop r9
 	pop r8
 
