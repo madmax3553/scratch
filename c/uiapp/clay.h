@@ -137,7 +137,7 @@ static uint8_t CLAY__ELEMENT_DEFINITION_LATCH;
 
 #else
 
-#define CLAY__INIT(type) (type)
+#define CLAY__INIT(type) ((type){0})
 
 #define CLAY__ALIGNMENT_STRUCT(type) struct Clay__Align##type { char c; type x; }
 #define CLAY__TYPEDEF(name, ...) typedef __VA_ARGS__ name; CLAY__ALIGNMENT_STRUCT(name); CLAY__WRAPPER_STRUCT(name)

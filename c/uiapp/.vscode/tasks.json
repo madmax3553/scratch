@@ -5,12 +5,14 @@
             "label": "build",
             "type": "shell",
             "command": "gcc",
-            "args": [
-                "-g",
+             "args": [
+                "-g",                // Add debug symbols
                 "main.c",
                 "-o",
                 "uiapp",
-                "-lclay" // Link with the Clay library
+                "-lraylib",         // Required library
+                "-lm",             // Math library
+                "-Wall"            // Warnings
             ],
             "group": {
                 "kind": "build",

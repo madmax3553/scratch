@@ -8,7 +8,7 @@
             "name": "Debug uiapp",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/main.c",
+            "program": "${workspaceFolder}/uiapp",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
